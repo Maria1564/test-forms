@@ -37,6 +37,8 @@ $errorKey = $_GET['error'] ?? null;
                     required
                     placeholder="password"
                     class="input" />
+
+                <!-- как я поняла, получение ключа для капчи платно, а у меня нет денег сейчас, я безработный человек) -->
                 <?php if ($errorKey): ?>
                     <div style="color: #a94442; font-weight: 800; text-align: center;">
                         <?= get_error_message($errorKey) ?>
