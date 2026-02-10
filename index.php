@@ -13,6 +13,8 @@ $errorKey = $_GET['error'] ?? null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -37,8 +39,8 @@ $errorKey = $_GET['error'] ?? null;
                     required
                     placeholder="password"
                     class="input" />
+                <div class="g-recaptcha" data-sitekey="6LfcxGYsAAAAAKXgBDVJ83KCNn_SB5p2P2EhcBja"></div>
 
-                <!-- как я поняла, получение ключа для капчи платно, а у меня нет денег сейчас, я безработный человек) -->
                 <?php if ($errorKey): ?>
                     <div style="color: #a94442; font-weight: 800; text-align: center;">
                         <?= get_error_message($errorKey) ?>

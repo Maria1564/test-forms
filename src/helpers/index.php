@@ -39,12 +39,15 @@ function get_error_message($code)
         'not_found_user'    => 'Нет пользователя с такими данными',
         'wrong_password'    => 'Неверный пароль!',
         'password_too_short' => 'Новый пароль слишком короткий!',
+        "undefined_captcha" => "Капча тоже обязательна",
+        "invalid_captcha"   => "Вы похожи на робота, подозрительно"
     ];
 
     return $messages[$code] ?? 'Произошла неизвестная ошибка';
 }
 
-function redirect($path) {
+function redirect($path)
+{
     header("Location: $path");
     exit();
 }
